@@ -99,7 +99,7 @@ class ListaEnlazada{
             cout << "La lista no tiene datos";
         }
         else{
-            int acum, cont = 0;
+            float acum, cont = 0;
             Nodo *temp = inicio;
             while(temp){
                 acum = acum + temp->dato;
@@ -107,6 +107,7 @@ class ListaEnlazada{
                 temp = temp->sig;
             }
             float media = acum/cont;
+            cout << endl << "El promedio es " << media << endl;
             return media;
         }
     }
@@ -121,14 +122,15 @@ int main(int argc, char** argv) {
     ListaEnlazada list01, list02;
     list01.agregarElemento(10);
     list01.agregarElemento(20);
+    list01.agregarElemento(20);
     list01.agregarElemento(30);
     list01.agregarElemento(40);
     list01.agregarElemento(50);
     list01.mostrarLista();
     
     list02 = list01.newList();
+    cout << endl << "La nueva lista es " << endl;
     list02.mostrarLista();
     
     return 0;
 }
-
